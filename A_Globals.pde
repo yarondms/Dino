@@ -21,6 +21,8 @@ SoundFile laughter;
 SoundFile swoosh;
 SoundFile fire;
 SoundFile bell;
+PGraphics moonGr;
+PImage moon;
 
 
 
