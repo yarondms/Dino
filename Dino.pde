@@ -5,6 +5,7 @@ void setup(){
    background(0);
    loadFonts();
    loadSounds();
+   loadMoon();
    showInstructions();
    character = new Character();
    cloudImage = loadImage("cloud.png");
@@ -64,14 +65,12 @@ void keyReleased(){
 }
 
 void draw(){
-  //background(0);
+  
   fill(0);
   rect(0,190,width,height);
    
   fireballRecharge.show();
-  
-  showMoon();  
-  
+    
   showAll();
   calcScore();
   speedUp(); 
