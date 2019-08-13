@@ -17,6 +17,18 @@ void loadSounds(){
   bell = new SoundFile(this,"bell.mp3");
 }
 
+void loadMoon(){
+  moonGr = createGraphics(100,100);   
+  moonGr.beginDraw();
+  moonGr.background(0,0,0,0);
+  moonGr.fill(255);
+  moonGr.noStroke();
+  moonGr.ellipse(28,28,44,44);
+  moonGr.filter(BLUR,2);
+  moonGr.endDraw();
+  moon = moonGr.get();
+}
+
 void reset(){
   speed = minSpeed;
   speedUpIndex = 0; 
@@ -36,22 +48,8 @@ void reset(){
 //      Draw      //
 // -------------- //
 
-void showMoon(){
-  int cx = width - 150;
-  int cy = ground - 150; 
-  noStroke();
-  ellipseMode(CENTER);
-  fill(130);
-  ellipse(cx,cy, 44,44); 
-  fill(180);
-  ellipse(cx, cy, 42,42); 
-  fill(230);
-  ellipse(cx,cy, 40,40); 
-  //popMatrix();
-  
-}
-
 void showAll(){
+  image(moon,width - 200,ground-200);
   stroke(100);
   line(0,groundLine,width,groundLine); 
   this.rm.show();
