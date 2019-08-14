@@ -34,6 +34,7 @@ void reset(){
   speedUpIndex = 0; 
   score = 0;
   frame = 0;
+  bg.init();
   obs = new Obstacles();
   this.character.reset();
   this.character.activateSafeMode();
